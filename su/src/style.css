@@ -119,7 +119,7 @@ iframe {
     margin-right: 16px;
 }
 .links a {
-    color: #586880;
+    color: #44546C;
     font-size: 15px;
     line-height: 28px;
     padding: 0 16px 24px;
@@ -154,4 +154,42 @@ div {
     font-weight: 600;
     color: #0F2A51;
     width: 216px;
+}
+a i {
+    border-radius: 8px;
+}
+.active a.re i, a.re i:hover {
+    color: #FCB84C;
+    background: rgba(252,184,76,.1);
+    box-shadow: 0 0 0 1px #FCB84C;
+    cursor: pointer;
+}
+a.pr i:hover {
+    color: #E8B078;
+    background: rgba(232,176,120,.1);
+    box-shadow: 0 0 0 1px #E8B078;
+}
+a.sa i:hover {
+    color: #009DDB;
+    background: rgba(0,157,219,.1);
+    box-shadow: 0 0 0 1px #009DDB;
+}
+a.vi i:hover {
+    color: #F86060;
+    background: rgba(248,96,96,.1);
+    box-shadow: 0 0 0 1px #F86060;
+}
+a.od i:hover {
+    color: #00985C;
+    background: rgba(0,152,92,.1);
+    box-shadow: 0 0 0 1px #00985C;
+}
+nav.second {
+    left: 0px;
+    z-index: 998;
+    box-shadow: 0 0 0 1px #DCE0E8;
+}
+.active .second {
+    width: 216px;
+    left: 60px;
 }
