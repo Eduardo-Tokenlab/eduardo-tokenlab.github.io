@@ -1,0 +1,132 @@
+/* main ------------------------------------------------------------------------------------------*/
+body {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background: #F6F8FA;
+    box-sizing: border-box;
+    height: 100%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 48px 16px;
+    position: relative;
+}
+/* main ------------------------------------------------------------------------------------------*/
+
+/* table -----------------------------------------------------------------------------------------*/
+table, caption, tbody, tfoot, thead, tr, th, td {
+    background: transparent;
+    border-collapse: collapse;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+table {
+    color: #44546C;
+    font-family: 'TextRegular', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    width: 100%;
+}
+thead {
+    background: #F6F8FA; 
+}
+th, td {
+    box-shadow: 0 -1px 0 0 #dce0e8 inset;
+}
+th {
+    color: #0F2A51;
+    cursor: pointer;
+    font-family: 'TextSemiBold', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 24px 16px 8px 0;
+    text-transform: uppercase;
+} 
+td {
+    padding: 16px 16px 16px 0;
+    position: relative;
+}
+td:first-child, td:last-child {
+    width: 32px;
+    padding: 16px;
+}
+td:first-child, td:last-child, tr:last-child td {
+    box-shadow: none;
+}
+div.container {
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px #dce0e8;
+    overflow: scroll;
+}
+a {
+    color: #009DDB;
+    font-family: 'TextSemiBold', sans-serif;
+}
+/* table -----------------------------------------------------------------------------------------*/
+
+/* sort ------------------------------------------------------------------------------------------*/
+.fa, .far, .fas {
+    font-family: 'IconsSolid';
+    font-style: normal;
+}
+table i.fas {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+}
+table i.fas::before {
+    content: "\f0dc";
+}
+table.js-sort-desc th.js-sort-active i.fas::before {
+    content: "\f0d8";
+}
+table.js-sort-asc th.js-sort-active i.fas::before {
+    content: "\f0d7";
+}
+/* sort ------------------------------------------------------------------------------------------*/
+
+/* scroll ----------------------------------------------------------------------------------------*/
+.simplebar-track.simplebar-horizontal {
+    top: 2px;
+    height: 12px;
+}
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    height: 8px;
+}
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar::before {
+    left: 4px;
+    right: 4px;
+}
+.simplebar-scrollbar.simplebar-visible::before {
+    background: #DCE0E8;
+    opacity: 1;
+}
+/* scroll ----------------------------------------------------------------------------------------*/
+
+/* tooltip ---------------------------------------------------------------------------------------*/
+span {
+    background: #FFF;
+    border-radius: 3px;
+    bottom: 48px;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 0 0 1px #f86060;
+    color: #F86060;
+    display: none;
+    font-family: 'TextSemiBold', sans-serif;
+    height: auto;
+    padding: 12px;
+    position: absolute;
+    z-index: 999;
+}
+td:hover span {
+    display: block;
+}
+/* tooltip ---------------------------------------------------------------------------------------*/
