@@ -11,37 +11,75 @@ html, body {
     width: 100%;
 }
 body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
     background: #F6F8FA;
     font-family: 'TextRegular', sans-serif;
 }
+:focus {
+    outline: none;
+    box-shadow: none;
+}
 /* main ------------------------------------------------------------------------------------------*/
 
-/* navigation ------------------------------------------------------------------------------------*/
-nav, iframe {
+/* iframe ----------------------------------------------------------------------------------------*/
+iframe {
     height: 100%;
+    left: 224px;
     position: absolute;
     transition: all .15s ease;
+    width: calc(100% - 224px);
 }
-nav {
+/* navigation ------------------------------------------------------------------------------------*/
+#sidebar {
     background: #FFF;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.12), 0 0 0 1px #DCE0E8;
-    overflow: hidden;
-    width: 216px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    transition: all .15s ease;
+    width: 224px;
     z-index: 999;
 }
-iframe {
-    left: 216px;
-    transition: all .15s ease;
-    width: calc(100% - 216px);
+#sidebar div {
+    box-shadow: inset 0 1px 0 0 #DCE0E8;
+    padding: 12px 12px 0;
+    width: 100%;
 }
-.active nav {
-    width: 60px;
+#sidebar div:first-of-type {
+    box-shadow: none;
+}
+#sidebar div a {
+    color: #44546C;
+    font-size: 15px;
+    line-height: 40px;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 8px;
+    margin: 0 0 12px;
+    overflow: hidden;
+    height: 40px;
+}
+#sidebar div a:hover, #sidebar div a:focus {
+    color: #0F2A51;
+    background: #F6F8FA;
+    font-weight: 600;
+}
+#sidebar div a:hover i, #sidebar div a:focus i {
+    font-family: IconsSolid;
+}
+#sidebar i {
+    font-size: 20px;
+    width: 40px;
+    margin-right: 8px;
+    text-align: center;
+    pointer-events: none;
+}
+.active #sidebar {
+    width: 64px;
 }
 .active iframe {
-    left: 60px;
-    width: calc(100% - 60px);
+    left: 64px;
+    width: calc(100% - 64px);
 }
 .logo {
     margin-top: 24px;
@@ -53,81 +91,113 @@ iframe {
 .active .logo {
     background: url(../img/menu-a.svg);
 }
-.links img {
-    margin-right: 16px;
-}
-.links a {
-    color: #44546C;
-    font-size: 15px;
-    line-height: 28px;
-    padding: 0 16px 24px;
-    text-decoration: none;
-    width: 216px;
-}
-.links {
-    box-shadow: inset 0 -1px 0 0 #DCE0E8;
-}
-.links.last {
-    box-shadow: none;
-}
-div {
-    padding-top: 24px;
-}
 /* navigation ------------------------------------------------------------------------------------*/
 
 .active .company {
     display: none;
 }
-.company {
-    font-family: 'TextSemiBold', sans-serif !important;
+#sidebar div.company {
     background: #F6F8FA;
-    box-shadow: inset 0 1px 0 0 #DCE0E8;
-    padding: 16px;
+    box-shadow: 0 0 0 1px #DCE0E8;
+    padding-bottom: 16px;
     position: absolute;
     bottom: 0;
     left: 0;
     font-size: 12.5px;
     line-height: 20px;
-    font-family: sans-serif;
     font-weight: 600;
     color: #0F2A51;
-    width: 216px;
+    width: 224px;
 }
-a i {
-    border-radius: 8px;
+@media (max-height: 768px){
+#sidebar div.company {
+        position: relative;
+    }
 }
-.active a.re i, a.re i:hover {
-    color: #FCB84C;
-    background: rgba(252,184,76,.1);
-    box-shadow: 0 0 0 1px #FCB84C;
-    cursor: pointer;
-}
-a.pr i:hover {
-    color: #E8B078;
-    background: rgba(232,176,120,.1);
-    box-shadow: 0 0 0 1px #E8B078;
-}
-a.sa i:hover {
-    color: #009DDB;
-    background: rgba(0,157,219,.1);
-    box-shadow: 0 0 0 1px #009DDB;
-}
-a.vi i:hover {
-    color: #F86060;
-    background: rgba(248,96,96,.1);
-    box-shadow: 0 0 0 1px #F86060;
-}
-a.od i:hover {
-    color: #00985C;
-    background: rgba(0,152,92,.1);
-    box-shadow: 0 0 0 1px #00985C;
-}
-nav.second {
+.submenu {
     left: 0px;
-    z-index: 998;
+    background: #FFF;
     box-shadow: 0 0 0 1px #DCE0E8;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: absolute;
+    transition: all .15s ease;
+    width: 256px;
+    z-index: 998;
+    left: -256px;
 }
-.active .second {
-    width: 216px;
-    left: 60px;
+.submenu div {
+    box-shadow: inset 0 1px 0 0 #DCE0E8;
+    padding: 12px;
+    width: 100%;
+}
+.submenu div:first-of-type {
+    box-shadow: none;
+}
+.submenu div a {
+    border-radius: 8px;
+    color: #44546C;
+    font-size: 15px;
+    line-height: 24px;
+    padding: 8px;
+    text-decoration: none;
+    width: 100%;
+}
+#user div a:hover {
+    background-color: #009DDB;
+    font-weight: 600;
+    color: #FFF;
+}
+#ramos div a:hover {
+    background-color: #FCCC68;
+    font-weight: 600;
+    color: #FFF;
+}
+#prev div a:hover {
+    background-color: #E8B078;
+    font-weight: 600;
+    color: #FFF;
+}
+#saude div a:hover {
+    background-color: #009DDB;
+    font-weight: 600;
+    color: #FFF;
+}
+#vida div a:hover {
+    background-color: #F86060;
+    font-weight: 600;
+    color: #FFF;
+}
+#odonto div a:hover {
+    background-color: #00985C;
+    font-weight: 600;
+    color: #FFF;
+}
+nav.open {
+    left: 64px;
+}
+a.open {
+    color: #FFF !important;
+}
+.open i {
+    font-family: IconsSolid !important;
+}
+#ra.open {
+    background-color: #FCCC68 !important;
+}
+#pr.open {
+    background-color: #E8B078 !important;
+}
+#sa.open {
+    background-color: #009DDB !important;
+}
+#vi.open {
+    background-color: #F86060 !important;
+}
+#od.open {
+    background-color: #00985C !important;
+}
+#us.open {
+    background-color: #009DDB !important;
 }
