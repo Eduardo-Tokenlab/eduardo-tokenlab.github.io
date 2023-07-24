@@ -157,7 +157,7 @@ iframe {
     text-decoration: none;
     width: 100%;
 }
-#user div a:hover {
+#user div a:hover, #search div a:hover, #fav div a:hover{
     background-color: #009DDB;
     font-weight: 600;
     color: #FFF;
