@@ -17,6 +17,10 @@ function SuNavSearch() {
     var element = document.getElementById('search');
     element.classList.add('open');
 }
+function SuNavFav() {
+    var element = document.getElementById('fav');
+    element.classList.add('open');
+}
 function SuNavRamos() {
     var element = document.getElementById('ramos');
     element.classList.add('open');

@@ -196,6 +196,9 @@ a.open {
 .open i {
     font-family: IconsSolid !important;
 }
+#us.open, #bu.open, #fa.open{
+    background-color: #009DDB !important;
+}
 #ra.open {
     background-color: #FCCC68 !important;
 }
@@ -210,7 +213,4 @@ a.open {
 }
 #od.open {
     background-color: #00985C !important;
-}
-#us.open {
-    background-color: #009DDB !important;
 }
