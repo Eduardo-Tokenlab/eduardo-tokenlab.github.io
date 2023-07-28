@@ -1,22 +1,20 @@
-/* main ------------------------------------------------------------------------------------------*/
-* {
-    border: 0;
-    box-sizing: border-box;
-    float: left;
-    margin: 0;
-    padding: 0;
-    scrollbar-color: #DCE0E8 transparent;
-    scrollbar-width: thin;
+/* cores -----------------------------------------------------------------------------------------*/
+:root {
+    --logo: #0A2C74;
+    --seg-odonto: #00985C;
+    --seg-prev: #E8B078;
+    --seg-ramos: #FCCC68;
+    --seg-saude: #2090D8;
+    --seg-vida: #F86060;
+    --texto-a: #102C50;
+    --texto-b: #44546C;
+    --ui-a: #FFFFFF;
+    --ui-b: #DCE0E8;
+    --ui-c: #F6F8FA;
+    --sombra-card: rgba(0, 0, 0, 0.08);
+    --sombra-modal: rgba(0, 0, 0, 0.12);
 }
-::-webkit-scrollbar {
-    width: 10px;
-    background-color: transparent;
-}
-::-webkit-scrollbar-thumb {
-    background: #DCE0E8;
-    border: 2px solid #FFF;
-    border-radius: 5px;
-}
+/* principal -------------------------------------------------------------------------------------*/
 html, body {
     height: 100%;
     width: 100%;
@@ -24,7 +22,24 @@ html, body {
 body {
     background: #F6F8FA;
     font-family: 'TextRegular', sans-serif;
-    overflow: overlay;
+}
+* {
+    border: 0;
+    box-sizing: border-box;
+    float: left;
+    margin: 0;
+    padding: 0;
+    scrollbar-color: var(--ui-b) transparent;
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--ui-b);
+    border-radius: 5px;
+    border: 2px solid var(--ui-a);
 }
 :focus {
     outline: none;
@@ -96,14 +111,28 @@ iframe {
     width: 64px;
 }
 .logo {
-    margin-top: 24px;
+    margin: 24px 8px 0 12px;
     cursor: pointer;
     background: url(../img/menu-b.svg);
-    width: 128px;
+    width: 40px;
     height: 48px;
 }
 .active .logo {
     background: url(../img/menu-a.svg);
+}
+#logosu {
+    width: 112px;
+    height: 48px;
+    background: url(../img/seguros.svg);
+    margin: 24px 0 0;
+    position: absolute;
+}
+.active #logosu {
+    display: none;
+}
+.buscar {
+    box-shadow: 0 0 0 1px #DCE0E8;
+    background: var(--ui-c);
 }
 /* extra -----------------------------------------------------------------------------------------*/
 .active .company {
@@ -213,4 +242,11 @@ a.open {
 }
 #od.open {
     background-color: #00985C !important;
+}
+.submenu i {
+    margin-right: 8px;
+    width: 24px;
+    text-align: center;
+    font-family: Icons !important;
+    font-weight: 300;
 }
